@@ -1,0 +1,10 @@
+Huy, 1
+Linh, 2
+An, 3
+Binh, 400
+Sieu nhan, 500
+Thanos, 600
+Bac si Trang, 700
+Son Tung, 800
+Weee, 900
+JaWeee, 2200

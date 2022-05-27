@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+C:\Users\ADMIN\Desktop\BrickBreak\.metadata\.plugins\org.eclipse.jdt.core

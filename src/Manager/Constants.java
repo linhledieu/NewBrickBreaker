@@ -8,8 +8,10 @@ import java.awt.Insets;
 
 
 public class Constants {
-	public static final int WIDTH = 640;
-	public static final int HEIGHT = 480;
+	public static final int MENU_HEIGHT = 700;
+	public static final int MENU_WIDTH = 480;
+    public static final int GAME_WIDTH = 900;
+    public static final int GAME_HEIGHT = 650;
     public static Color BG_COLOR = Color.black;
     public static Color PADDLE_COLOR = Color.yellow;
     public static Color BALL_COLOR = Color.gray;

@@ -1,15 +1,13 @@
 package main;
 
 import Manager.Constants;
+import main.UI.MainMenu;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 
 import javax.swing.*;
@@ -88,7 +86,7 @@ public class IntroMenu extends JPanel{
 
 		//Other function
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
-        playerName.addKeyListener(new PressingKeys());
+        playerName.addKeyListener(new main.PressingKeys());
 		//NOT ALLOW USER RESIZE
 		window.setResizable(true);
 		window.setTitle("THUNDER BRICK BREAKER PRO MAX ULTRA VIP");     
@@ -104,7 +102,7 @@ public class IntroMenu extends JPanel{
 		listener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {              
-                window.setSize(480, 700);
+                window.setSize(Constants.MENU_WIDTH, Constants.MENU_HEIGHT);
                 window.validate();
                 window.repaint();
                 //timer.stop();
@@ -115,41 +113,3 @@ public class IntroMenu extends JPanel{
         timer.start();
 	}
 }
-
-
-class PressingKeys extends KeyAdapter {
-	@Override
-    public void keyPressed(KeyEvent e) {
-		int action = e.getKeyCode();
-
-        if(action == KeyEvent.VK_ENTER) {
-			String file = "src/Resources/scores.txt";
-			try {
-				FileWriter writer = new FileWriter(file, true);
-				BufferedWriter fileWriter = new BufferedWriter(writer);
-
-				fileWriter.write(IntroMenu.playerName.getText());
-				fileWriter.newLine();
-				fileWriter.flush();
-			} catch (IOException ex) {
-				throw new RuntimeException(ex);
-			}
-			IntroMenu.window.dispose();
-        	try {
-				new MainMenu();
-			} catch (InterruptedException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-        }
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-        int action = e.getKeyCode();
-    }
-
-}
-
-
-  

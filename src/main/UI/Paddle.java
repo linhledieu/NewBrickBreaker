@@ -1,6 +1,6 @@
 package main.UI;
 
-import main.GamePanel;
+import main.Algorithms.GamePanel;
 
 import java.awt.Color;
 import java.awt.Font;

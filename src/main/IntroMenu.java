@@ -20,7 +20,7 @@ public class IntroMenu extends JPanel{
 	static JFrame window;
 	static JPanel bg;
 	static JPanel textPanel;
-	static JTextField playerName;
+	public static JTextField playerName;
 	static ActionListener listener;
 	static Timer timer;
 

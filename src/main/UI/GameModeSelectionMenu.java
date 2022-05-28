@@ -4,8 +4,7 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 
-import main.GamePanel;
-import main.UI.MainMenu;
+import main.Algorithms.GamePanel;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

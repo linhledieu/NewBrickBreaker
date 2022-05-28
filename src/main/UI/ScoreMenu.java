@@ -103,7 +103,7 @@ public class ScoreMenu extends JFrame {
 		scorePanel.setBackground(new Color(254, 10, 207, 0));
 
 		c.insets = new Insets(600, 140, 10 , 140); //-> positioning Scorepanel
-		exit = new JButton("EXIT");
+		exit = new JButton("Back");
 		exit.setOpaque(true);
 		exit.setBorderPainted(true);
 		exit.setFont(Constants.titleFont);

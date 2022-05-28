@@ -1,7 +1,6 @@
-package main;
+package main.Algorithms;
 
-import Manager.Constants;
-import main.Algorithms.*;
+import main.IntroMenu;
 import main.UI.*;
 
 import javax.sound.sampled.LineUnavailableException;

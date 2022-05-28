@@ -1,6 +1,6 @@
 package Maps;
 
-import main.GamePanel;
+import main.Algorithms.GamePanel;
 
 public class Classic {
 	public int[][] map;

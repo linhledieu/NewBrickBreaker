@@ -1,6 +1,5 @@
 package main.Algorithms;
 
-import main.GamePanel;
 import main.UI.Ball;
 
 import java.awt.*;

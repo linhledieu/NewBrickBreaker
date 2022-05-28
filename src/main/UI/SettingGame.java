@@ -77,7 +77,7 @@ public class SettingGame extends JFrame implements ActionListener{
     
     //INFO BUTTON
      JButton saveButton = new JButton("Save");
-     JButton menuButton = new JButton("Main Menu");
+     JButton menuButton = new JButton("Back");
 	
 	 ActionListener listener;
 	 Timer timer;

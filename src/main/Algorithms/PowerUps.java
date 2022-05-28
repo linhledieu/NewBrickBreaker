@@ -1,8 +1,5 @@
 package main.Algorithms;
 
-import main.Algorithms.CollisionSound;
-import main.GamePanel;
-
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Graphics2D;

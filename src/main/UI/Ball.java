@@ -1,7 +1,7 @@
 package main.UI;
 
 import main.Algorithms.CollisionSound;
-import main.GamePanel;
+import main.Algorithms.GamePanel;
 
 import java.awt.BasicStroke;
 import java.awt.Color;

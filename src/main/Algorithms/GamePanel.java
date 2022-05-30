@@ -12,7 +12,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -40,10 +39,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 	private MouseListener MouseListener;
 	private Scoreboard scoreboard;
 	private String name;
-	private JTextField t;
-	private JButton b;
-	private JFrame f;
-	private String mode;
 	private boolean scoreTyped;
 	Image backgroundImage;
 	public static Sound s;
@@ -102,7 +97,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 		
 		addMouseMotionListener(MouseListener);
 		Thread.sleep(2000);
+		if (Constants.sound == true) {
 		s.play();
+		}
 		running = true;
 		image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
 		
@@ -113,19 +110,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 		count2 = 0;
 	}
 	
-	public void actionPerformed(ActionEvent e) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-		String s = this.t.getText();
-		this.name = s;
-		f.setVisible(false);
-
-		try {
-			init();
-		} catch (InterruptedException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-
-	}
 	
 	@Override
 	public void run() {
@@ -472,7 +456,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 			count1 -- ;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+			if (Constants.sound == true) {
 			s.pause(); 
+			}
 			
 			for (Ball ball:ballList) {
 				ball.stop();
@@ -629,30 +615,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
         }
     }
 
-	public static final int WIDTH = 900;
-	public static final int HEIGHT = 650;
-//	public static JFrame frame;
-//	
-//	public static void main(String[] args) throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
-//		s = new Sound();
-//		if (SettingGame.music == true) {
-//			s.play();	
-//		} else {
-//			s.pause();
-//		}
-//		
-//		GamePanel panel = new GamePanel();
-//		Thread thread = new Thread(panel);
-//		frame.setLocation(450, 50);
-//		frame.setResizable(false);
-//		frame.setSize(WIDTH, HEIGHT);
-//		frame.add(panel);
-//		thread.start();
-//		
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//		frame.setVisible(true);
-//		
-//	}
+
 	
 }
 	

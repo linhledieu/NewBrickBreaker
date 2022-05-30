@@ -28,7 +28,7 @@ public class Ball {
 	
 	public Ball() {
 		this.x = (int) (Math.random()*(GamePanel.WIDTH - 30));
-		this.y = (int) (Math.random()*200);
+		this.y = 20;
 		
 		double a = (Math.random()*2+1);
 		double b =  (Math.random()*2+1);

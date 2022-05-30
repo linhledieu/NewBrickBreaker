@@ -210,7 +210,7 @@ public class Butterfly {
 		map[14][14]=3;
 		
 		if (type == 2) {
-			for (int t = 0; t<2 ; t++) {
+			for (int t = 0; t<3 ; t++) {
 				while (true) {
 				r = (int) (Math.random()*(row-2)+1);
 				c = (int) (Math.random()*(col-2)+1);
@@ -221,7 +221,7 @@ public class Butterfly {
 				}
 				
 			}
-			for (int t = 0; t<2 ; t++) {
+			for (int t = 0; t<3 ; t++) {
 				while (true) {
 				r = (int) (Math.random()*(row-2)+1);
 				c = (int) (Math.random()*(col-2)+1);
@@ -243,7 +243,7 @@ public class Butterfly {
 				}
 				
 			}
-			for (int t = 0; t<2 ; t++) {
+			for (int t = 0; t<3 ; t++) {
 				while (true) {
 				r = (int) (Math.random()*(row-2)+1);
 				c = (int) (Math.random()*(col-2)+1);

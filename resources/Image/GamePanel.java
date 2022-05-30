@@ -292,9 +292,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 						}
 						if (ballList.get(i).getPowered() == false) {
 							map.hitBrick(row, col);
-							HUD.addScore();
 							boolean a = ballList.get(i).getX() >= brickx- ballList.get(i).getSize()+1 && ballList.get(i).getX() <= brickx-ballList.get(i).getSize()+4;
-							boolean b = ballList.get(i).getX() <= brickx+width-1 && ballList.get(i).getX() >= brickx+width-11 && ballList.get(i).getY() >= bricky-13 && ballList.get(i).getY() <= bricky+height-ballList.get(i).getSize()+13;
+							boolean b = ballList.get(i).getX() <= brickx+width-3 && ballList.get(i).getX() >= brickx+width-4;
+							
 							if (a || b) {
 								ballList.get(i).setDX(-ballList.get(i).getDX());
 								
@@ -303,13 +303,14 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 								ballList.get(i).setDY(-ballList.get(i).getDY());
 							
 							}
-							
+							if (mapArray[row][col]== 0) {
+								HUD.addScore();
+							}
 						} else if (ballList.get(i).getPowered() == true) {
 							map.hitBrick(row, col);
-							HUD.addScore();
 							
 							boolean a = ballList.get(i).getX() >= brickx- ballList.get(i).getSize()+1 && ballList.get(i).getX() <= brickx-ballList.get(i).getSize()+4;
-							boolean b = ballList.get(i).getX() <= brickx+width-1/15*ballList.get(i).getSize() && ballList.get(i).getX() >= brickx+width-6/16*ballList.get(i).getSize() && ballList.get(i).getY() >= bricky-13/15*ballList.get(i).getSize() && ballList.get(i).getY() <= bricky+height-ballList.get(i).getSize()+13/15*ballList.get(i).getSize();
+							boolean b = ballList.get(i).getX() <= brickx+width-3 && ballList.get(i).getX() >= brickx+width-4;
 							
 							if (a || b) {
 								ballList.get(i).setDX(-ballList.get(i).getDX());
@@ -319,7 +320,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 								ballList.get(i).setDY(-ballList.get(i).getDY());
 							
 							}
-							
+							if (mapArray[row][col]== 0) {
+								HUD.addScore();
+							}
 						}
 						break A;
 					}
@@ -604,15 +607,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
             @Override
             public void keyPressed(KeyEvent e) {
                 int action = e.getKeyCode();
-                if(action == KeyEvent.VK_ESCAPE) {
-                	if (Constants.sound == true) {
-        				try {
-							s.resumeAudio();
-						} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}
-        			}
+                
                     for (Ball ball: GamePanel.ballList) {
                         ball.conti();
 
@@ -623,7 +618,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
                     GamePanel.a = 1;
                     GamePanel.d = 0;
                     dispose();
-                }
                 
             }
         }

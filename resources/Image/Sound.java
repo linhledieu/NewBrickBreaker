@@ -19,7 +19,6 @@ public class Sound {
         clip = AudioSystem.getClip();
         clip.open(audioInputStream);
         currentFrame = clip.getMicrosecondPosition();
-        clip.loop(Clip.LOOP_CONTINUOUSLY);
     }
     public Sound(String s) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
     	audioInputStream = AudioSystem.getAudioInputStream(new File("resources/Sound/lose.wav").getAbsoluteFile());
@@ -30,7 +29,13 @@ public class Sound {
     }
     public void start() throws InterruptedException {
     	clip.start();
-    	
+    	while (clip.isRunning()) {
+    		long counter = clip.getMicrosecondPosition();
+    		if (counter > 1000) {
+    			clip.stop();
+    			clip.close();
+    		}
+    	}
     }
    
 //    public static void main(String[] args) {

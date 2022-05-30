@@ -114,7 +114,6 @@ public class Ball {
 			this.ballSize = 0;
 			return;
 		}
-		System.out.println(countBall);
 	}
 	
 		

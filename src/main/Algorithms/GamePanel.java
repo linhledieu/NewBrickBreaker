@@ -85,7 +85,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}	
-		}
+		} 
 		mouseX = 0;
 		paddle = new Paddle();
 		map = new Map(Constants.map, type);
@@ -289,7 +289,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 						if (ballList.get(i).getPowered() == false) {
 							map.hitBrick(row, col);
 							boolean a = ballList.get(i).getX() >= brickx- ballList.get(i).getSize()+1 && ballList.get(i).getX() <= brickx-ballList.get(i).getSize()+4;
-							boolean b = ballList.get(i).getX() <= brickx+width-3 && ballList.get(i).getX() >= brickx+width-4;
+							boolean b = ballList.get(i).getX() <= brickx+width-1 && ballList.get(i).getX() >= brickx+width-6 && ballList.get(i).getY() >= bricky-10 && ballList.get(i).getY() <= bricky+height-ballList.get(i).getSize()+10;
 							
 							if (a || b) {
 								ballList.get(i).setDX(-ballList.get(i).getDX());

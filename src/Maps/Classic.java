@@ -15,7 +15,7 @@ public class Classic {
 		map = new int[row][col];
 		this.brickHeight = (GamePanel.HEIGHT/2 -2*50)/row;
 		this.brickWidth = (GamePanel.WIDTH - 2*80)/col;
-		this.backGround = "resources/Image/background.png";
+		this.backGround = "resources/Image/classic3.png";
 	}
 	public int getH() {
 		return brickHeight;
@@ -36,7 +36,7 @@ public class Classic {
 		}
 		
 		if (type == 2) {
-			for (int t = 0; t<1 ; t++) {
+			for (int t = 0; t<2 ; t++) {
 				while (true) {
 				r = (int) (Math.random()*(row-2)+1);
 				c = (int) (Math.random()*(col-2)+1);
@@ -47,7 +47,7 @@ public class Classic {
 				}
 				
 			}
-			for (int t = 0; t<1 ; t++) {
+			for (int t = 0; t<2 ; t++) {
 				while (true) {
 				r = (int) (Math.random()*(row-2)+1);
 				c = (int) (Math.random()*(col-2)+1);
@@ -58,7 +58,7 @@ public class Classic {
 				}
 				
 			}
-			for (int t = 0; t<1 ; t++) {
+			for (int t = 0; t<2 ; t++) {
 				while (true) {
 				r = (int) (Math.random()*(row-2)+1);
 				c = (int) (Math.random()*(col-2)+1);
@@ -69,7 +69,7 @@ public class Classic {
 				}
 				
 			}
-			for (int t = 0; t<1 ; t++) {
+			for (int t = 0; t<2 ; t++) {
 				while (true) {
 				r = (int) (Math.random()*(row-2)+1);
 				c = (int) (Math.random()*(col-2)+1);

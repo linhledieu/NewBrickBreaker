@@ -14,4 +14,33 @@ bao, 1
 bao, 12
 Cuong, 194
 Cuong, 66
+<<<<<<< HEAD
 Type your name, 84
+=======
+Enter your name, 3
+Enter your name, 0
+Enter your name, 0
+Enter your name, 1
+Enter your name, 0
+Enter your name, 0
+Enter your name, 1
+Enter your name, 0
+Enter your name, 0
+Enter your name, 1
+Chu Ha Linh, 205
+Enter your name, 47
+Enter your name, 21
+Enter your name, 14
+Enter your name, 1
+Enter your name, 1
+Enter your name, 1
+Enter your name, 1
+Enter your name, 0
+Enter your name, 0
+Enter your name, 5
+Enter your name, 28
+Enter your name, 18
+Enter your name, 6
+Enter your name, 5
+Enter your name, 10
+>>>>>>> 1822800 (add background)

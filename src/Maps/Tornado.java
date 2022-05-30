@@ -138,7 +138,7 @@ public class Tornado {
 				}
 				
 			}
-			for (int t = 0; t<2 ; t++) {
+			for (int t = 0; t<1 ; t++) {
 				while (true) {
 				r = (int) (Math.random()*(row-2)+1);
 				c = (int) (Math.random()*(col-2)+1);

@@ -15,7 +15,7 @@ public class X {
 		map = new int[row][col];
 		this.brickHeight = (GamePanel.HEIGHT/2)/row; 
 		this.brickWidth = (GamePanel.WIDTH - 2*80)/col;
-		this.backGround = "resources/Image/computer3.jpg";
+		this.backGround = "resources/Image/pinksky.jpg";
 	}
 	public int getH() {
 		return brickHeight;
@@ -102,20 +102,20 @@ public class X {
 		map[7][10]=6;
 		map[4][9]=6;
 		map[6][9]=6;
-		map[0][3]=8;
-		map[0][9]=8;
-		map[1][4]=8;
-		map[1][8]=8;
-		map[2][5]=8;
-		map[2][7]=8;
-		map[3][6]=8;
-		map[7][6]=8;
-		map[10][3]=8;
-		map[10][9]=8;
-		map[9][4]=8;
-		map[9][8]=8;
-		map[8][5]=8;
-		map[8][7]=8;
+		map[0][3]=3;
+		map[0][9]=3;
+		map[1][4]=3;
+		map[1][8]=3;
+		map[2][5]=3;
+		map[2][7]=3;
+		map[3][6]=3;
+		map[7][6]=3;
+		map[10][3]=3;
+		map[10][9]=3;
+		map[9][4]=3;
+		map[9][8]=3;
+		map[8][5]=3;
+		map[8][7]=3;
 		if (type == 2) {
 			for (int t = 0; t<2 ; t++) {
 				while (true) {
@@ -161,7 +161,7 @@ public class X {
 				}
 				
 			}
-			for (int t = 0; t<2 ; t++) {
+			for (int t = 0; t<1 ; t++) {
 				while (true) {
 				r = (int) (Math.random()*(row-2)+1);
 				c = (int) (Math.random()*(col-2)+1);

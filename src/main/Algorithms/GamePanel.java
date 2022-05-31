@@ -425,9 +425,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 	public void drawLose() {
 		g.setColor(Color.RED);
 		g.setFont(new Font("serif", Font.BOLD, 30));
-		g.drawString("You Lose", WIDTH/2 - 60, 250);
-		g.drawString("Score: " + HUD.getScore(), WIDTH/2 -60, 275);
-		g.drawString("Press ENTER to Replay" , WIDTH/2 - 160 , 300);
+		g.drawString("You Lose", WIDTH/2 - 60, 370);
+		g.drawString("Score: " + HUD.getScore(), WIDTH/2 -60, 400);
+		g.drawString("Press ENTER to Replay" , WIDTH/2 - 160 , 425);
 		if (!scoreTyped) {
 			saveScore();
 		}

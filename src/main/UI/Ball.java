@@ -123,14 +123,14 @@ public class Ball {
 		 if (powered == true) {
 			 g.setColor(Color.red);
 			 g.setStroke(new BasicStroke(4));
-			 g.drawOval((int) x, (int) y, ballSize, ballSize);
+			 g.fillOval((int) x, (int) y, ballSize, ballSize);
 				g.setColor(Color.RED);
 				g.setFont(new Font("serif", Font.BOLD, 18));
 				g.drawString("Ball Shrinking in " + (3 - (System.nanoTime() - powerTimer) / 1000000000), GamePanel.WIDTH-200, 40);
 		 }else {
 			 g.setColor(Constants.BALL_COLOR);
 			 g.setStroke(new BasicStroke(4));
-			 g.drawOval((int) x, (int) y, ballSize, ballSize);
+			 g.fillOval((int) x, (int) y, ballSize, ballSize);
 	}
 	}
 	

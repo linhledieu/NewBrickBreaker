@@ -456,6 +456,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 			
 		}
 		if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+			if (Ball.countBall <= 0) {
 			try {
 				try {
 					init();
@@ -466,6 +467,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 			} catch (InterruptedException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
+			}
 			}
 		}
 		if(e.getKeyCode() == KeyEvent.VK_SPACE && count > 0) {

@@ -43,7 +43,6 @@ public class PowerUps {
 		if (type == MULTIPLIER) {pic = ImageIO.read(new File("resources/Image/powerUp7.png"));}
 		if (type == SPLIT) {pic = ImageIO.read(new File("resources/Image/powerUp6.png"));}
 		if (type == EXPLODE) {pic = ImageIO.read(new File("resources/Image/explosion9.png"));}
-//		if (type == EXPLODE) {pic1 = Toolkit.getDefaultToolkit().createImage("resources/Image/explosion7.gif");}
 		
 		
 		dy = (double) (Math.random()*2+1);
@@ -53,10 +52,6 @@ public class PowerUps {
 	public void draw(Graphics2D g, Component c) {
 		g.drawImage(pic, x, y, size , size, c);
 	}
-//	public void draw1(Graphics2D g, Component c) {
-//		g.drawImage(pic1, x, y, c);
-//	}
-//	
 	public void update() {
 		this.y += this.dy;
 		this.size = 30;

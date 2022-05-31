@@ -28,34 +28,7 @@ public class Sound {
         currentFrame = clip.getMicrosecondPosition();
         
     }
-    public void start() throws InterruptedException {
-    	clip.start();
-    	
-    }
    
-//    public static void main(String[] args) {
-//        try {
-//            Sound audioPlayer = new Sound();
-//            audioPlayer.play();
-//            currentFrame = clip.getMicrosecondPosition();
-//            Scanner sc = new Scanner(System.in);
-//            while (true) { 
-//                System.out.println("1. turn on");
-//                System.out.println("2. turn off");
-//                //System.out.println("3. restart");
-//                //System.out.println("4. stop");
-//                //System.out.println("5. Jump to specific time");
-//                int c = sc.nextInt();
-//                audioPlayer.gotoChoice(c);
-//                if (c == 0)
-//                break;
-//            }
-//            sc.close();
-//        } catch (Exception ex) {
-//            System.out.println("Error with playing sound.");
-//            ex.printStackTrace();
-//          }
-//    }
     public void gotoChoice(int c) throws IOException, LineUnavailableException, UnsupportedAudioFileException {
         switch (c) {
             case 1:

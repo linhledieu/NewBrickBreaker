@@ -61,3 +61,30 @@ Enter your name, 16
 Enter your name, 2
 Enter your name, 0
 Enter your name, 0
+mino, 2
+mino, 2
+mino, 18
+Le Chi Cuong, 244
+duc duc thinh, 2
+duc duc thinh, 1
+duc duc thinh, 153
+duc duc thinh, 13
+thinh 2, 26
+thinh 2, 604
+ducthinh, 82
+Cuong, 57
+Tung, 33
+Cuong, 64
+Cuong, 18
+Cuong, 0
+Cuong, 202
+Cuong, 12
+Cuong, 158
+Cuong, 119
+Cuong, 85
+Cuong, 25
+Cuong, 377
+Cuong, 730
+Cuong, 10
+Cuong, 6
+Cuong, 777

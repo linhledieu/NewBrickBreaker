@@ -88,7 +88,7 @@ public class Ball {
 	
 	public void update() {
 		setPosition();
-		if ((System.nanoTime() - powerTimer) / 1000 > 9000000 && powered == true) {
+		if ((System.nanoTime() - powerTimer) / 1000 > 3000000 && powered == true) {
 			this.ballSize = startSize;
 			this.powered = false;
 		}
@@ -119,15 +119,19 @@ public class Ball {
 		
 
 	public void draw(Graphics2D g) {
-		 g.setColor(Constants.BALL_COLOR);
-		 g.setStroke(new BasicStroke(4));
-		 g.drawOval((int) x, (int) y, ballSize, ballSize);
 		 
 		 if (powered == true) {
+			 g.setColor(Color.red);
+			 g.setStroke(new BasicStroke(4));
+			 g.drawOval((int) x, (int) y, ballSize, ballSize);
 				g.setColor(Color.RED);
 				g.setFont(new Font("serif", Font.BOLD, 18));
-				g.drawString("Ball Shrinking in " + (9 - (System.nanoTime() - powerTimer) / 1000000000), GamePanel.WIDTH-200, 40);
-		 }
+				g.drawString("Ball Shrinking in " + (3 - (System.nanoTime() - powerTimer) / 1000000000), GamePanel.WIDTH-200, 40);
+		 }else {
+			 g.setColor(Constants.BALL_COLOR);
+			 g.setStroke(new BasicStroke(4));
+			 g.drawOval((int) x, (int) y, ballSize, ballSize);
+	}
 	}
 	
 	public Rectangle getRect() {

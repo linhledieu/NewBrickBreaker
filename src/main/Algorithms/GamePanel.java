@@ -2,7 +2,6 @@ package main.Algorithms;
 
 import Manager.Constants;
 import main.IntroMenu;
-//import main.Algorithms.CollisionSound.PauseMenu.PressingKeys;
 import main.UI.*;
 
 import javax.sound.sampled.LineUnavailableException;
@@ -41,9 +40,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 	private Scoreboard scoreboard;
 	private String name;
 	private JTextField t;
-	private JButton b;
 	private JFrame f;
-	private String mode;
 	private boolean scoreTyped;
 	Image backgroundImage;
 	public static Sound s;
@@ -53,6 +50,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 	public static int d;
 	public static boolean getBackTOMenu;
 	private int type;
+	public static int WIDTH = 910, HEIGHT = 610;
 	
 	private Paddle paddle;
 	private Map map;
@@ -78,10 +76,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 	}
 	
 	public void init() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
-//		Scanner sc = new Scanner(System.in);
-//		System.out.print("Mode: ");
-//		String mode = sc.next(); 
-//		frame = new JFrame("Brick Breaker");
 		getBackTOMenu = false;
 		d = 0;
 		c = WIDTH/2 ; 
@@ -171,7 +165,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 				} else if (powerUps.get(i).getType() == PowerUps.ENLARGE && !powerUps.get(i).getUsed()) {
 					for (int j = 0; j < ballList.size(); j++) {
 						ballList.get(j).setSize(ballList.get(j).getSize()*2);
-//						ballList.get(j).setX(ballList.get(j).getX()-ballList.get(j).getSize());
 					}
 					powerUps.get(i).setUsed(true);
 				} else if (powerUps.get(i).getType() == PowerUps.MULTIPLIER && !powerUps.get(i).getUsed()) {
@@ -296,8 +289,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 							map.hitBrick(row, col);
 							HUD.addScore();
 							boolean a = ballList.get(i).getX() >= brickx- ballList.get(i).getSize()+1 && ballList.get(i).getX() <= brickx-ballList.get(i).getSize()+4;
-							boolean b = ballList.get(i).getX() <= brickx+width-1 && ballList.get(i).getX() >= brickx+width-11 && ballList.get(i).getY() >= bricky-13 && ballList.get(i).getY() <= bricky+height-ballList.get(i).getSize()+13;
+							boolean b = ballList.get(i).getX() <= brickx+width-1 && ballList.get(i).getX() >= brickx+width-11 && ballList.get(i).getY() >= bricky-11 && ballList.get(i).getY() <= bricky+height-ballList.get(i).getSize()+11;
 							
+							if (ballList.get(i).getSize() == 15) {
 							if (a || b) {
 								ballList.get(i).setDX(-ballList.get(i).getDX());
 								
@@ -305,6 +299,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 							else {
 								ballList.get(i).setDY(-ballList.get(i).getDY());
 							
+							}
 							}
 							
 						} else if (ballList.get(i).getPowered() == true) {
@@ -312,8 +307,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 							HUD.addScore();
 							
 							boolean a = ballList.get(i).getX() >= brickx- ballList.get(i).getSize()+1 && ballList.get(i).getX() <= brickx-ballList.get(i).getSize()+4;
-							boolean b = ballList.get(i).getX() <= brickx+width-1 && ballList.get(i).getX() >= brickx+width-11 && ballList.get(i).getY() >= bricky-13 && ballList.get(i).getY() <= bricky+height-ballList.get(i).getSize()+13;
+							boolean b = ballList.get(i).getX() <= brickx+width-1 && ballList.get(i).getX() >= brickx+width-11 && ballList.get(i).getY() >= bricky-11 && ballList.get(i).getY() <= bricky+height-ballList.get(i).getSize()+11;
 							
+							if (ballList.get(i).getSize() == 15) {
 							if (a || b) {
 								ballList.get(i).setDX(-ballList.get(i).getDX());
 								
@@ -322,9 +318,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 								ballList.get(i).setDY(-ballList.get(i).getDY());
 							
 							}
-							if (mapArray[row][col]== 0) {
-								HUD.addScore();
-							}
+							
+						}
 						}
 						break A;
 					}
@@ -341,7 +336,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
         running = false;
         GameModeSelectionMenu.f.dispose();
         if(getBackTOMenu == true) {try {
-			new MainMenu();
+			Ball.countBall = -1;
+        	new MainMenu();
+			
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -477,8 +474,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 			count1 -- ;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+			if (Constants.sound == true) {
 			s.pause(); 
-			
+				}
 			for (Ball ball:ballList) {
 				ball.stop();
 				
@@ -490,31 +488,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 			d = 1;
 			new PauseMenu("Paused game!");
 		}
-//		if(e.getKeyCode() == KeyEvent.VK_S) {
-//			try {
-//				scoreboard.writeScore(HUD.getScore());
-//			} catch (IOException e1) {
-//				// TODO Auto-generated catch block
-//				e1.printStackTrace();
-//			}
-//			try {
-//				scoreboard.readScore();
-//			} catch (IOException e1) {
-//				// TODO Auto-generated catch block
-//				e1.printStackTrace();
-//			}
-//		}
-//		if(e.getKeyCode() == KeyEvent.VK_H) {
-//			try {
-//				ArrayList<Integer> temp = scoreboard.readScore();
-//				for (int i = 0; i < 5; i++) {
-//					System.out.println("Top " + String.valueOf(i+1) + ": " + temp.get(i));
-//				}
-//			} catch (IOException e1) {
-//				// TODO Auto-generated catch block
-//				e1.printStackTrace();
-//			}
-//		}
 	}
 	
 	public void saveScore() {
@@ -634,30 +607,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
         }
 	}
 
-	public static final int WIDTH = 910;
-	public static final int HEIGHT = 610;
-//	public static JFrame frame;
-//	
-//	public static void main(String[] args) throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
-//		s = new Sound();
-//		if (SettingGame.music == true) {
-//			s.play();	
-//		} else {
-//			s.pause();
-//		}
-//		
-//		GamePanel panel = new GamePanel();
-//		Thread thread = new Thread(panel);
-//		frame.setLocation(450, 50);
-//		frame.setResizable(false);
-//		frame.setSize(WIDTH, HEIGHT);
-//		frame.add(panel);
-//		thread.start();
-//		
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//		frame.setVisible(true);
-//		
-//	}
 	
 }
 	

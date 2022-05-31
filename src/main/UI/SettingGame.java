@@ -51,14 +51,14 @@ public class SettingGame extends JFrame implements ActionListener{
 	 JLabel paddleColorLabel = new JLabel("PADDLE COLOR");
 	 JRadioButton yellowPaddleButton = new JRadioButton("yellow");
 	 JRadioButton bluePaddleButton = new JRadioButton("blue");
-	 JRadioButton redPaddleButton = new JRadioButton("red");
+	 JRadioButton blackPaddleButton = new JRadioButton("black");
 	 ButtonGroup paddleButtonGroup = new ButtonGroup();
 	
 	//BALL
 	 JLabel ballColorLabel = new JLabel("BALL COLOR");
 	 JRadioButton yellowBallButton = new JRadioButton("yellow");
 	 JRadioButton blueBallButton = new JRadioButton("blue");
-	 JRadioButton redBallButton = new JRadioButton("red");
+	 JRadioButton blackBallButton = new JRadioButton("black");
 	 ButtonGroup ballButtonGroup = new ButtonGroup();
      
 	//MUSIC
@@ -118,12 +118,12 @@ public class SettingGame extends JFrame implements ActionListener{
 		//COLOR
 		paddleButtonGroup.add(yellowPaddleButton);
 		paddleButtonGroup.add(bluePaddleButton);
-		paddleButtonGroup.add(redPaddleButton);
+		paddleButtonGroup.add(blackPaddleButton);
         
         //BALL
 		ballButtonGroup.add(yellowBallButton);
 		ballButtonGroup.add(blueBallButton);
-		ballButtonGroup.add(redBallButton);
+		ballButtonGroup.add(blackBallButton);
 		
 		//MUSIC
         musicSettingGroup.add(onMusicButton);
@@ -143,7 +143,7 @@ public class SettingGame extends JFrame implements ActionListener{
         
         //Create array for different type
         List<JLabel> labelList = new ArrayList<JLabel>(Arrays.asList(ballColorLabel, paddleColorLabel, musicSettingLabel, difficultyLabel));
-        List<JRadioButton> buttonList = new ArrayList<JRadioButton>(Arrays.asList(Butterfly, Diamond, House, OOP, Tornado, X, onMusicButton, offMusicButton, blueBallButton, redBallButton, yellowBallButton, bluePaddleButton, redPaddleButton, yellowPaddleButton));
+        List<JRadioButton> buttonList = new ArrayList<JRadioButton>(Arrays.asList(Butterfly, Diamond, House, OOP, Tornado, X, onMusicButton, offMusicButton, blueBallButton, blackBallButton, yellowBallButton, bluePaddleButton, blackPaddleButton, yellowPaddleButton));
         List<JButton> infoButtonList = new ArrayList<JButton>(Arrays.asList(menuButton, saveButton));
         List<JPanel> panelList = new ArrayList<JPanel>();
         
@@ -228,8 +228,8 @@ public class SettingGame extends JFrame implements ActionListener{
     	
     	innerPannel_c.gridx = 0;
 	  	innerPannel_c.gridy = 1;
-	  	redPaddleButton.setHorizontalAlignment(JRadioButton.CENTER);
-    	paddleColorPanel.add(redPaddleButton, innerPannel_c);
+	  	blackPaddleButton.setHorizontalAlignment(JRadioButton.CENTER);
+    	paddleColorPanel.add(blackPaddleButton, innerPannel_c);
     	innerPannel_c.gridx = 1;
 	  	innerPannel_c.gridy = 1;
 	  	bluePaddleButton.setHorizontalAlignment(JRadioButton.CENTER);
@@ -247,8 +247,8 @@ public class SettingGame extends JFrame implements ActionListener{
     	
     	innerPannel_c.gridx = 0;
 	  	innerPannel_c.gridy = 1;
-	  	redBallButton.setHorizontalAlignment(JRadioButton.CENTER);
-	  	ballColorPanel.add(redBallButton, innerPannel_c);
+	  	blackBallButton.setHorizontalAlignment(JRadioButton.CENTER);
+	  	ballColorPanel.add(blackBallButton, innerPannel_c);
     	innerPannel_c.gridx = 1;
 	  	innerPannel_c.gridy = 1;
 	  	blueBallButton.setHorizontalAlignment(JRadioButton.CENTER);
@@ -364,9 +364,9 @@ public class SettingGame extends JFrame implements ActionListener{
         //ADD FUNCTION TO     
         yellowPaddleButton.setActionCommand("Paddle Yellow");       
         bluePaddleButton.setActionCommand("Paddle Blue");
-        redPaddleButton.setActionCommand("Paddle Red");
+        blackPaddleButton.setActionCommand("Paddle Black");
      
-        redBallButton.setActionCommand("Ball Red");
+        blackBallButton.setActionCommand("Ball Black");
         yellowBallButton.setActionCommand("Ball Yellow");    
         blueBallButton.setActionCommand("Ball Blue");
 
@@ -395,13 +395,13 @@ public class SettingGame extends JFrame implements ActionListener{
         				Constants.PADDLE_COLOR = Color.yellow;
         			} else if (paddleButtonGroup.getSelection().getActionCommand().equals("Paddle Blue")) {
         				Constants.PADDLE_COLOR = Color.blue;
-        			} else if (paddleButtonGroup.getSelection().getActionCommand().equals("Paddle Red")) {
-        				Constants.PADDLE_COLOR = Color.red;
+        			} else if (paddleButtonGroup.getSelection().getActionCommand().equals("Paddle Black")) {
+        				Constants.PADDLE_COLOR = Color.black;
         			}
         			
         			//set the customized color of the ball
-        			if (ballButtonGroup.getSelection().getActionCommand().equals("Ball Red")) {
-        				Constants.BALL_COLOR = Color.red;
+        			if (ballButtonGroup.getSelection().getActionCommand().equals("Ball Black")) {
+        				Constants.BALL_COLOR = Color.BLACK;
         			} else if (ballButtonGroup.getSelection().getActionCommand().equals("Ball Yellow")) {
         				Constants.BALL_COLOR = Color.yellow;
         			} else if (ballButtonGroup.getSelection().getActionCommand().equals("Ball Blue")) {

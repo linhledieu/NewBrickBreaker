@@ -37,10 +37,8 @@ public class MainMenu {
 	
 	
 	public MainMenu() throws InterruptedException {
-	//public static void main(String[] args) throws InterruptedException {
 		//Create a Jframe
 		frame = new JFrame("OOP Project");
-		//menuFrame.add(new JLabel(new ImageIcon("resources/Image/brick_breaker.gif")), BorderLayout.CENTER);
 
 		
 		//A JPanel of Button holder

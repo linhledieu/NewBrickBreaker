@@ -37,12 +37,6 @@ public class Sound {
             case 2:
                 pause();
                 break;
-            //case 3:
-            //    restart();
-            //    break;
-            //case 4:
-            //    stop();
-            //    break;
         }
     }
     public void play() {

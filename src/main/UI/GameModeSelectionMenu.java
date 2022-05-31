@@ -30,7 +30,6 @@ public class GameModeSelectionMenu extends JFrame {
 	
 	static ActionListener listener;
 	static Timer timer;
-//	public static Sound s;
 	
 	
 	public GameModeSelectionMenu() throws InterruptedException {
@@ -165,16 +164,6 @@ public class GameModeSelectionMenu extends JFrame {
 				} catch (LineUnavailableException ex) {
 					throw new RuntimeException(ex);
 				}
-//				if (Constants.sound == true) {
-//	    			try {
-//						s = new Sound();
-//					} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
-//						// TODO Auto-generated catch block
-//						e1.printStackTrace();
-//					}	
-//	    		} else {
-//	    		
-//	    		}
 
 				Thread thread = new Thread(panel);
     			
@@ -207,16 +196,6 @@ public class GameModeSelectionMenu extends JFrame {
 				} catch (LineUnavailableException ex) {
 					throw new RuntimeException(ex);
 				}
-//				if (Constants.sound == true) {
-//	    			try {
-//						s = new Sound();
-//					} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
-//						// TODO Auto-generated catch block
-//						e1.printStackTrace();
-//					}	
-//	    		} else {
-//	    		
-//	    		}
 
 				Thread thread = new Thread(panel);
     			

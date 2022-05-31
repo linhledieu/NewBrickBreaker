@@ -20,7 +20,6 @@ public class PowerUps {
 	private double  dy; 
 	private boolean isOnScreen;
 	private boolean used;
-	private Color color;
 	Image pic;
 	Image pic1;
 	int num;

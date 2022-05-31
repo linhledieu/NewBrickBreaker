@@ -12,9 +12,9 @@ import java.util.Map.Entry;
 public class Scoreboard {
 	public void writeScore(String name, int score) throws IOException {
 		try {
-			FileWriter myWriter = new FileWriter("Resources/scores.txt", true);
+			FileWriter myWriter = new FileWriter("resources/scores.txt", true);
 			BufferedWriter bw = new BufferedWriter(myWriter);
-			BufferedReader fileRead = new BufferedReader(new FileReader("Resources/scores.txt"));
+			BufferedReader fileRead = new BufferedReader(new FileReader("resources/scores.txt"));
 			bw.newLine();
 			bw.write(name + ", " + score);
 			bw.close();
@@ -24,7 +24,7 @@ public class Scoreboard {
 	}
 
 	public LinkedHashMap<String, Integer> readScore() throws IOException {
-		BufferedReader fileReader = new BufferedReader(new FileReader("Resources/scores.txt"));
+		BufferedReader fileReader = new BufferedReader(new FileReader("resources/scores.txt"));
 		ArrayList<Integer> scores = new ArrayList<>();
 		String temp = fileReader.readLine();
 		Map<String, Integer> map = new HashMap<String, Integer>();
@@ -60,54 +60,5 @@ public class Scoreboard {
 
 
 
-//package main;
-//
-//import java.io.BufferedReader;
-//import java.io.BufferedWriter;
-//import java.io.FileReader;
-//import java.io.FileWriter;
-//import java.io.IOException;
-//import java.util.ArrayList;
-//import java.util.Collections;
-//
-//public class Scoreboard {
-//	public void writeScore(int score) throws IOException {
-//		if (checkScore(score) == true) {
-//			try {
-//				FileWriter myWriter = new FileWriter("scores.txt", true);
-//			    BufferedWriter bw = new BufferedWriter(myWriter);
-//			    bw.write(String.valueOf(score));
-//			    bw.newLine();
-//			    bw.close();
-//			} catch (IOException e) {
-//				e.printStackTrace();
-//			}
-//		}
-//	}
-//
-//	public boolean checkScore(int x) throws IOException {
-//		ArrayList<Integer> temp = readScore();
-//		boolean check = false;
-//		for (int i: temp) {
-//			if (x > i) {
-//				check = true;
-//			}
-//		}
-//		return check;
-//	}
-//
-//	public ArrayList<Integer> readScore() throws IOException {
-//		BufferedReader fileReader = new BufferedReader(new FileReader("scores.txt"));
-//	    ArrayList<Integer> scores = new ArrayList<>();
-//	    String line = fileReader.readLine();
-//	    while (line != null) {
-//	    	scores.add(Integer.parseInt(line));
-//	    	line = fileReader.readLine();
-//	    }
-//	    fileReader.close();
-//	    scores.sort(Collections.reverseOrder());
-//	    return scores;
-//	}
-//}
 
 

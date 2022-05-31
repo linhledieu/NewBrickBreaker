@@ -11,17 +11,6 @@ public class PressingKeys extends KeyAdapter {
         int action = e.getKeyCode();
 
         if(action == KeyEvent.VK_ENTER) {
-//			String file = "Resources/scores.txt";
-//			try {
-//				FileWriter writer = new FileWriter(file, true);
-//				BufferedWriter fileWriter = new BufferedWriter(writer);
-//
-//				fileWriter.write(IntroMenu.playerName.getText());
-//				fileWriter.newLine();
-//				fileWriter.flush();
-//			} catch (IOException ex) {
-//				throw new RuntimeException(ex);
-//			}
 
             IntroMenu.window.dispose();
             try {

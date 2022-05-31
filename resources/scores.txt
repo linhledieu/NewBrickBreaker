@@ -7,6 +7,7 @@ than dang, 1
 baby boss, 20
 chi tho ngoc, 20
 sep, 99
+Cuong, 777
 Dao Duc Thinh, 51
 Dao Duc Thinh, 0
 bao, 5
@@ -70,7 +71,6 @@ duc duc thinh, 1
 duc duc thinh, 153
 duc duc thinh, 13
 thinh 2, 26
-thinh 2, 604
 ducthinh, 82
 Cuong, 57
 Tung, 33
@@ -118,3 +118,7 @@ Cuong, 87
 Cuong, 31
 Cuong, 629
 Cuong, 193
+Cuong, 762
+Cuong, 1
+hi, 777
+Hell, 4
